@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow-x: none;
+  background-color: #ffffff;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 12px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(73, 71, 71);
+}
+
+ul{
+  list-style: none;
+}
+h1{
+  text-align: center;
+}
+.main__item-list > div{
+  display: flex;
+}
+button.counter-button{
+  text-align: center;
+}
+main{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1000px){
+  main{width: 100%};
+}
+.main__content button {
+  background: white;
+  border: 1px solid black;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: .5s all ease;
+  margin-top: 30px;
+}
+.main__content button:hover{
+  background: rgba(0, 0, 0, 0.815);
+  color: white;
+  transform: translateY(-5px);
+}
+.main__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+.popup{
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+.popup.show{
+  opacity: 1;
+  pointer-events: all;
+  transition: all 1s ease;
+  height: auto;
+}
+input{
+  outline: none;
+  border: 1px solid rgba(70, 69, 69, 0.281);
+  border-radius: 5px;
+  font-size: 16px;
+  min-height: 20px;
+  padding-left: 10px;
+  color: rgb(73, 71, 71);
+}
+.form__item{
+  display: flex;
+  margin: 15px 0;
+}
+label, span,  select{
+  font-size: 18px;
+}
+.main__form{
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 10px;
+}
+label{
+  min-width: 90px;
+  margin-right: 20px;
+}
+button{
+  background-color: white;
+  outline: none;
+  padding: 8px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  color: rgb(73, 71, 71);
+}
+button:hover{
+  transition: .5s all ease;
+  transform: translateY(-4px);
+  background: #666;
+  color: white;
+
+}
+.form__submit {
+  display: flex;
+  justify-content: flex-end;
+}
+select#category {
+  padding: 4px 15px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  color: rgb(73, 71, 71);
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #a09b9d;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.form-checkbox label {
+  min-width: 18px;
+}
+.form__item span {
+  margin-right: 15px;
+}
+.book {
+  display: flex;
+  align-items: center;
+}
+.book > div {
+  width: 100px;
+}
+.main__list-item {
+  margin: 30px 0;
+}
+.book {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.book > div {
+  min-width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+.popup.show span {
+  color: red;
+}
+.book span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media (max-width: 1000px){
+  .form-checkbox {
+    width: 46px;
+}
+.book > div {
+  max-width: 24%;
+  min-width: auto;
+  padding: 0 10px;
+}
+.book span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main__list-item {
+  margin: 30px 0;
+  padding: 0 10px;
+}
+}

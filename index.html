@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zadanie 2</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="main__content">
+      <h1>BIBLIOTEKA KSIĄŻEK</h1>
+    </div>
+    <div class="main__form">
+      <form id="form" class="form" action="">
+        <div class="form__item">
+          <label for="title">Tytuł książki</label>
+          <input role="formPole" id="title" type="text"  name="title">
+        </div>
+        <div class="form__item">
+          <label for="author">Autor</label>
+          <input role="formPole" id="author"  type="text" name="author">
+        </div>
+        <div class="form__item">
+          <span>Priorytet przeczytania</span>
+          <div class="form-checkbox">
+            <input role="formPole" checked value="1"  type="radio"  name="priority" class="priority" id="checkbox1">
+            <label for="checkbox1">1</label>
+          </div>
+          <div class="form-checkbox">
+            <input role="formPole" value="2" type="radio" name="priority" class="priority" id="checkbox2">
+            <label for="checkbox2">2</label>
+          </div>
+          <div class="form-checkbox">
+            <input role="formPole" value="3" type="radio" name="priority" class="priority" id="checkbox3">
+            <label for="checkbox3">3</label>
+          </div>
+          <div class="form-checkbox">
+            <input role="formPole" value="4" type="radio" name="priority" class="priority" id="checkbox4">
+            <label for="checkbox4">4</label>
+          </div>
+          <div class="form-checkbox">
+            <input role="formPole" value="5" type="radio" name="priority" class="priority" id="checkbox5">
+            <label for="checkbox5">5</label>
+          </div>
+        </div>
+        <div class="form__item">
+          <label for="category">Wybierz kategorię</label>
+          <select  role="formPole" name="category" id="category">
+            <option value="fantasy">Fantastyka</option>
+            <option value="drama">Dramat</option>
+            <option value="comedy">Komedia</option>
+          </select>
+        </div>
+        <div class="form__submit">
+          <button id="form_submit" type="submit">DODAJ KSIĄŻKĘ</button>
+        </div>
+        <div class="popup">
+          <span>Prosimy uzupełnić poprawnie wszystkie pola</span>
+        </div>
+      </form>
+    </div>
+    <div class="main__list">
+        <div class="main__list-item"></div>
+    </div>
+  </main>
+  <script src="build/app.bundle.js"></script>
+</body>
+</html>
